@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Tailwind CSS Command -->
+  <!--
+  npx tailwindcss -i ./src/input.css -o ./dist/assets/css/output.css --watch
+  -->
+
+  <head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Google Font CDN Links -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons CSS File Link -->
+    <link href="assets/css/bootstrap-icon.css" rel="stylesheet" />
+    <!-- Tailwind CSS File Link -->
+    <link href="assets/css/output.css" rel="stylesheet" />
+    <!-- Custom CSS File Link -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- Favicon link tags -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+
+    <!-- Primary Meta Tags -->
+    <title>Harsh Kushwaha | Frontend Developer, HIRE NOW!</title>
+    <meta
+      name="title"
+      content="Harsh Kushwaha | Frontend Developer, HIRE NOW!"
+    />
+    <meta
+      name="description"
+      content="Welcome to my digital playground, where pixels come to life and creativity knows no bounds. I'm Harsh, a passionate frontend web developer with a knack for turning ideas into interactive and visually stunning experiences."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://theharshdev.github.io/me/" />
+    <meta
+      property="og:title"
+      content="Harsh Kushwaha | Frontend Developer, HIRE NOW!"
+    />
+    <meta
+      property="og:description"
+      content="Welcome to my digital playground, where pixels come to life and creativity knows no bounds. I'm Harsh, a passionate frontend web developer with a knack for turning ideas into interactive and visually stunning experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://theharshdev.github.io/me/assets/images/metaImg.webp"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://theharshdev.github.io/me/" />
+    <meta
+      property="twitter:title"
+      content="Harsh Kushwaha | Frontend Developer, HIRE NOW!"
+    />
+    <meta
+      property="twitter:description"
+      content="Welcome to my digital playground, where pixels come to life and creativity knows no bounds. I'm Harsh, a passionate frontend web developer with a knack for turning ideas into interactive and visually stunning experiences."
+    />
+    <meta
+      property="twitter:image"
+      content="https://theharshdev.github.io/me/assets/images/metaImg.webp"
+    />
+  </head>
+
+  <body class="dark:bg-black bg-zinc-100">
+    <!-- Thankyou Popup box -->
+    <div
+      class="sm:w-[400px] p-6 rounded-md bg-zinc-200 dark:bg-zinc-800 shadow-lg dark:shadow-black fixed top-4 right-4 sm:left-auto left-4 z-[999] thannkyouPopupBox transition-all hidden"
+    >
+      <button
+        type="button"
+        class="text-zinc-900 dark:text-white text-lg absolute top-2 right-2 hover:bg-zinc-300 dark:hover:bg-slate-700 w-6 h-6 flex justify-center items-center rounded-full leading-3 closeThannkyouPopupBox"
+      >
+        <i class="bi bi-x"></i>
+      </button>
+      <div class="flex items-center">
+        <i
+          class="bi bi-check-circle text-3xl text-zinc-900 dark:text-zinc-200 inline-block me-3 leading-3"
+        ></i>
+        <h3 class="text-zinc-800 dark:text-zinc-200 text-sm font-normal pe-3">
+          Thank you! I've received your message and will get back to you
+          shortly.
+        </h3>
+      </div>
+    </div>
+    <!-- Pre loader -->
+    <div id="preLoader">
+      <div
+        class="h-screen w-full flex items-center justify-center bg-white dark:bg-zinc-800 fixed top-0 left-0 right-0 bottom-0 z-[99999]"
+      >
+        <div>
+          <!-- Dots -->
+          <div class="flex justify-center items-center">
+            <div
+              class="w-3 h-3 rounded-full bg-zinc-700 dark:bg-white mx-1 loadingDot1"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-zinc-700 dark:bg-white mx-1 loadingDot2"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-zinc-700 dark:bg-white mx-1 loadingDot3"
+            ></div>
+            <div
+              class="w-3 h-3 rounded-full bg-zinc-700 dark:bg-white mx-1 loadingDot4"
+            ></div>
+          </div>
+          <div class="mt-8 w-72 h-[2px] bg-zinc-500/40 overflow-hidden">
+            <!-- Loading line -->
+            <div
+              class="bg-zinc-700 dark:bg-white w-[50%] h-full loadingLine"
+            ></div>
+          </div>
+          <div
+            class="text-center text-zinc-700 dark:text-zinc-200 text-xs font-normal mt-3"
+          >
+            Loading...
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation menu -->
+    <div
+      class="lg:px-20 absolute top-0 left-0 w-full z-50 block transition-all"
+      id="navBar"
+    >
+      <div
+        class="container mx-auto pt-4 lg:px-20 md:px-12 sm:px-6 px-3 bg-transparent relative"
+      >
+        <!-- Navigation menu starts here -->
+        <div
+          class="flex justify-between items-center p-3 backdrop-blur-sm rounded-lg"
+        >
+          <a href="index.html">
+            <img
+              src="assets/images/logo2.webp"
+              alt=""
+              class="w-14 brightness-0 opacity-75 dark:opacity-100 dark:brightness-[10000]"
+            />
+          </a>
+          <nav
+            class="sm:flex hidden sm:relative fixed top-0 left-0 right-0 justify-center items-center border dark:border-zinc-600 sm:rounded-full py-3 px-6 backdrop-blur-sm shadow-sm bg-white dark:bg-zinc-700 z-50 menu"
+          >
+            <button
+              type="button"
+              class="absolute top-4 right-4 sm:hidden w-8 h-8 flex justify-center items-center rounded-full dark:bg-zinc-500/50 bg-zinc-100 closeMenu"
+            >
+              <i
+                class="bi bi-x text-zinc-800 dark:text-white text-2xl leading-none"
+              ></i>
+            </button>
+            <a
+              href="#about"
+              class="px-3 sm:text-xs navLinks text-sm font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white sm:inline block w-full sm:py-0 py-4 sm:mt-0 mt-16"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="px-3 sm:text-xs navLinks text-sm font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white sm:inline block w-full sm:py-0 py-4"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="px-3 sm:text-xs navLinks text-sm font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white sm:inline block w-full sm:py-0 py-4"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="px-3 sm:text-xs navLinks text-sm font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white sm:inline block w-full sm:py-0 py-4"
+              >Experiences</a
+            >
+            <a
+              href="#uses"
+              class="px-3 sm:text-xs navLinks text-sm font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white sm:inline block w-full sm:py-0 py-4"
+              >Uses</a
+            >
+          </nav>
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="lightModeToggleBtn text-base text-zinc-800 dark:text-zinc-200 hidden justify-center items-center leading-3 w-10 h-10 rounded-full lg:hover:bg-zinc-500/5 lg:bg-transparent lg:dark:bg-transparent bg-zinc-500/10 dark:bg-zinc-600/30 dark:hover:bg-zinc-600/30 dark:flex"
+            >
+              <i class="bi bi-brightness-high"></i>
+            </button>
+            <button
+              type="button"
+              class="darkModeToggleBtn text-base text-zinc-800 dark:text-zinc-200 flex justify-center items-center leading-3 w-10 h-10 rounded-full lg:bg-transparent lg:dark:bg-transparent bg-zinc-500/10 dark:bg-zinc-600/30 lg:hover:bg-zinc-500/5 dark:hover:bg-zinc-600/30 dark:hidden"
+            >
+              <i class="bi bi-moon-stars"></i>
+            </button>
+            <button
+              type="button"
+              class="text-zinc-950 dark:text-white text-xs font-medium bg-zinc-500/10 dark:bg-zinc-600/30 py-3 px-4 rounded-full ms-2 sm:hidden openMenu"
+            >
+              <span class="flex items-center">
+                Menu
+                <i class="bi bi-chevron-down ps-1"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Navigation menu ends here -->
+      </div>
+    </div>
+    <!-- Hero section starts here -->
+    <div class="lg:px-20">
+      <div
+        class="container sm:border-x border-x-0 mx-auto pt-8 lg:px-20 md:px-12 sm:px-6 px-3 pb-96 dark:border-zinc-600 bg-white dark:bg-zinc-900 relative overflow-x-hidden"
+      >
+        <!-- Hero section starts here -->
+        <main class="relative w-full">
+          <div class="md:mt-28 mt-20 md:w-3/4 sm:w-2/3 w-full pt-10">
+            <img src="assets/images/myLogoImg.webp" alt="" class="w-20" />
+            <!-- Main heading -->
+            <h1
+              class="text-zinc-800 dark:text-white lg:text-6xl md:text-5xl text-4xl font-bold mt-5"
+            >
+              Frontend Web Developer, UI/UX Developer, and Photography Hobbyist
+            </h1>
+            <p class="text-sm mt-6 font-light text-zinc-700 dark:text-zinc-200">
+              Welcome to my digital playground, where pixels come to life and
+              creativity knows no bounds. I'm Harsh, a passionate frontend web
+              developer with a knack for turning ideas into interactive and
+              visually stunning experiences.
+            </p>
+          </div>
+          <!-- Socials links -->
+          <div class="flex flex-wrap items-center justify-between mt-8">
+            <div class="flex items-center">
+              <a
+                href="https://github.com/theharshdev"
+                class="text-xl leading-3 w-12 h-12 flex justify-center items-center rounded-full me-3 transition-all hover:animate-pulse text-zinc-700 dark:text-zinc-200 hover:text-zinc-800 dark:hover:text-white"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/theharshdev/"
+                class="text-xl leading-3 w-12 h-12 flex justify-center items-center rounded-full me-3 transition-all hover:animate-pulse text-zinc-700 dark:text-zinc-200 hover:text-zinc-800 dark:hover:text-white"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://twitter.com/itsharshdev"
+                class="text-xl leading-3 w-12 h-12 flex justify-center items-center rounded-full me-3 transition-all hover:animate-pulse text-zinc-700 dark:text-zinc-200 hover:text-zinc-800 dark:hover:text-white"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://wa.me/+918737812696"
+                class="text-xl leading-3 w-12 h-12 flex justify-center items-center rounded-full me-3 transition-all hover:animate-pulse text-zinc-700 dark:text-zinc-200 hover:text-zinc-800 dark:hover:text-white"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+              <a
+                href="tel:+91 8737812696"
+                class="text-xl leading-3 w-12 h-12 flex justify-center items-center rounded-full me-3 transition-all hover:animate-pulse text-zinc-700 dark:text-zinc-200 hover:text-zinc-800 dark:hover:text-white"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+            <a
+              href="assets/Harsh-Kushwaha.pdf"
+              class="text-zinc-800 dark:text-zinc-300 hover:text-blue-400 dark:hover:text-white text-sm font-semibold ps-4 sm:mt-0 mt-4"
+            >
+              <span class="flex items-center">
+                Download CV
+                <i class="bi bi-download ps-3 text-xl leading-3"></i>
+              </span>
+            </a>
+          </div>
+        </main>
+        <!-- Hero section ends here -->
+      </div>
+    </div>
+    <!-- Images section of hero section -->
+    <div
+      class="flex whitespace-nowrap items-center justify-center -mt-80 w-full overflow-hidden animateBounceSlow"
+    >
+      <img
+        src="assets/images/img1.png"
+        alt=""
+        class="md:w-72 sm:w-48 w-40 rounded-2xl block shadow-md md:m-4 m-2 rotate-[3deg]"
+      />
+      <img
+        src="assets/images/img2.png"
+        alt=""
+        class="md:w-72 sm:w-48 w-40 rounded-2xl block shadow-md md:m-4 m-2 rotate-[-2deg]"
+      />
+      <img
+        src="assets/images/img8.png"
+        alt=""
+        class="md:w-72 sm:w-48 w-40 rounded-2xl block shadow-md md:m-4 m-2 rotate-[4deg]"
+      />
+      <img
+        src="assets/images/img6.png"
+        alt=""
+        class="md:w-72 sm:w-48 w-40 rounded-2xl block shadow-md md:m-4 m-2 rotate-[-3deg]"
+      />
+      <img
+        src="assets/images/img5.png"
+        alt=""
+        class="md:w-72 sm:w-48 w-40 rounded-2xl block shadow-md md:m-4 m-2 rotate-[3deg]"
+      />
+    </div>
+    <!-- About me section -->
+    <div class="lg:px-20 -mt-24">
+      <div
+        class="container sm:border-x border-x-0 mx-auto pt-4 lg:px-20 md:px-12 sm:px-6 px-3 dark:border-zinc-600 bg-white dark:bg-zinc-900 pb-56"
+      >
+        <!-- About me -->
+        <div class="lg:pt-48 md:pt-44 pt-36" id="about">
+          <p
+            class="text-3xl font-bold text-zinc-400/25 dark:text-zinc-600/25 select-none uppercase"
+          >
+            About
+          </p>
+          <div class="flex flex-wrap justify-center">
+            <div class="lg:w-1/2 md:w-3/4 sm:w-2/3 w-full md:px-6">
+              <h3
+                class="text-zinc-800 dark:text-white md:text-5xl text-3xl font-bold uppercase"
+              >
+                Harsh Kushwaha, Developing Tomorrow from the Heart of Delhi
+              </h3>
+              <p
+                class="mt-10 text-zinc-700 dark:text-zinc-200 text-sm font-normal font-sans"
+              >
+                Welcome to my corner of the digital universe! I'm Harsh
+                Kushwaha, a frontend web developer fueled by an insatiable
+                curiosity for all things code and design. From the elegant
+                simplicity of HTML to the intricate dance of JavaScript, I
+                thrive on the ever-evolving challenges of the web development
+                world. But beyond the lines of code, I am a storyteller, shaping
+                digital narratives that engage and inspire.<br /><br />
+
+                For me, web development is not just a job; it's a passionate
+                pursuit of perfection in pixels. I believe in the transformative
+                power of well-crafted code and captivating design. Each project
+                is an opportunity to weave together functionality and
+                aesthetics, creating an immersive user experience. My philosophy
+                is rooted in the belief that the web should not only function
+                flawlessly but also leave a lasting impression on those who
+                interact with it.<br /><br />
+
+                My journey into the world of web development began with a
+                fascination for the limitless possibilities of the internet.
+                Over the years, I've honed my skills in HTML5, CSS3, and
+                JavaScript, navigating the ever-expanding landscape of frontend
+                technologies. I bring a blend of technical expertise and a keen
+                eye for design to every project, ensuring that each digital
+                creation is not just functional but a work of art in its own
+                right.<br /><br />
+
+                Collaboration is at the heart of what I do. Whether it's
+                translating a client's vision into a dynamic website or
+                collaborating with a creative team on an innovative project, I
+                thrive on the exchange of ideas. As technology evolves, so does
+                my commitment to staying at the forefront of the latest trends
+                and tools. The future of web development is an exciting
+                frontier, and I am eager to continue pushing boundaries,
+                creating memorable digital experiences, and bringing fresh ideas
+                to life.
+              </p>
+            </div>
+            <div class="lg:w-1/2 sm:w-2/3 w-full px-6 lg:mt-0 mt-12">
+              <div class="animateBounceSlow relative">
+                <img
+                  src="assets/images/myImg.png"
+                  alt=""
+                  class="w-full block rotate-[4deg] bg-zinc-200/50 dark:bg-zinc-600/10 rounded-2xl px-4 pt-4 pb-0 relative z-10"
+                />
+                <img
+                  src="assets/images/bgExp.png"
+                  alt=""
+                  class="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 dark:opacity-20 opacity-30 rotate-12 p-6"
+                />
+              </div>
+              <!-- About section socials -->
+              <div class="mt-10">
+                <a
+                  href="https://twitter.com/itsharshdev"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm mb-3 hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-twitter"></i> Follow on
+                  Twitter</a
+                >
+                <a
+                  href="https://wa.me/+918737812696"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm mb-3 hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-whatsapp"></i> Message on
+                  Whatsapp</a
+                >
+                <a
+                  href="https://github.com/theharshdev"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm mb-3 hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-github"></i> Follow on
+                  GitHub</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/theharshdev/"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm mb-3 hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-linkedin"></i> Follow on
+                  LinkedIn</a
+                >
+                <a
+                  href="mailto:knp.harsh@gmail.com"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm pt-4 mb-3 mt-10 border-t border-zinc-500 hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-envelope"></i>
+                  knp.harsh@gmail.com</a
+                >
+                <a
+                  href="tel:+91 8737812696"
+                  class="text-zinc-800 dark:text-zinc-300 font-medium flex items-center text-sm hover:text-blue-500 dark:hover:text-white"
+                  ><i class="bi text-2xl pe-4 bi-telephone"></i> +91
+                  8737812696</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Email me slider -->
+    <div
+      class="overflow-hidden w-full flex whitespace-nowrap -mt-40 relative z-10"
+    >
+      <h3
+        class="md:text-8xl text-6xl font-bold uppercase scrollLeft shrink-0 select-none text-zinc-800 dark:text-zinc-300"
+      >
+        Lets Create Something Together Email Me!
+      </h3>
+      <h3
+        class="md:text-8xl sm:text-6xl text-4xl font-bold uppercase scrollLeft shrink-0 select-none text-zinc-800 dark:text-zinc-300 ms-10"
+      >
+        Lets Create Something Together Email Me!
+      </h3>
+    </div>
+    <!-- Projects, skill and experience section  -->
+    <div class="lg:px-20 -mt-24">
+      <div
+        class="container sm:border-x border-x-0 mx-auto pt-4 lg:px-20 md:px-12 sm:px-6 px-3 dark:border-zinc-600 bg-white dark:bg-zinc-900 relative"
+      >
+        <img
+          src="assets/images/bg.png"
+          alt="..."
+          class="absolute bottom-0 right-0 w-52"
+        />
+        <!-- Projects section -->
+        <div class="pt-44 mt-12 pb-16" id="projects">
+          <h3
+            class="md:text-5xl text-4xl font-bold text-zinc-800 dark:text-white -mt-12 md:w-2/3 w-full"
+          >
+            A Showcase of My Web Development Odyssey
+          </h3>
+          <p
+            class="text-sm font-normal text-zinc-700 dark:text-zinc-300 mt-5 md:w-2/3 w-full"
+          >
+            Explore a gallery of my digital creations, each project a unique
+            story waiting to be told. From sleek and responsive websites to
+            dynamic web applications, every line of code is a brushstroke in the
+            canvas of my digital journey. Dive into the portfolio and witness
+            the fusion of technology and artistry.
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-start mt-10">
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/blog/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >1</span
+                >
+                <img
+                  src="assets/images/website-design.png"
+                  alt=""
+                  class="w-14"
+                />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Personal Blog Website
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Bootstrap fuels a seamless interface, balancing aesthetics and
+                  functionality, while JavaScript adds interactivity for dynamic
+                  content and smooth transitions.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/lime/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >2</span
+                >
+                <img
+                  src="assets/images/cloud-computing.png"
+                  alt=""
+                  class="w-14"
+                />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Service based company website
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  The Service-Based Company Website is a showcase of my Tailwind
+                  CSS expertise, highlighting a minimalist design for a sleek
+                  and responsive user experience.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/circle/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >3</span
+                >
+                <img src="assets/images/website.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Circle (The Website)
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Tailwind CSS, JavaScript, and jQuery, introduces dynamic
+                  dark/light modes. Seamless user experiences are amplified with
+                  cookie integration.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/weather/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >4</span
+                >
+                <img
+                  src="assets/images/clouds-and-sun.png"
+                  alt=""
+                  class="w-14"
+                />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Weather Web App
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Tailwind CSS, JavaScript and a weather API to deliver a
+                  seamless user experience. The addition of dynamic dark and
+                  light modes enhances the app's aesthetic appeal.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/note/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >5</span
+                >
+                <img src="assets/images/notes.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Notes App
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Developed in JavaScript, TailwindCSS, HTML and CSS only, with
+                  a good user experience and a eye catching User Interface, with
+                  all CRUD operations.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/todo/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >6</span
+                >
+                <img src="assets/images/checklist.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  ToDo List App
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  TailwindCSS, JavaScript, HTML and CSS are the technologies
+                  which are used to make this beautiful UI and User Experience
+                  and user can perform all CRUD operations.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/poveda/index.html"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >7</span
+                >
+                <img src="assets/images/backpack.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Travel Website
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  I seamlessly blend design and functionality using HTML, CSS,
+                  and JavaScript. The responsive layout ensures a smooth user
+                  experience across devices.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://theharshdev.github.io/icchha/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >8</span
+                >
+                <img src="assets/images/help.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Icchha Foundation
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  NGO Website Unveiled: A responsive masterpiece crafted with
+                  Tailwind CSS, JavaScript, and jQuery. Explore the seamless
+                  blend of design and interactivity.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    github.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://helpemailtales.com/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >9</span
+                >
+                <img src="assets/images/mail-box.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Help Email Tales
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Leveraging client-side validation, the project features both
+                  multi-step and traditional contact forms for a seamless user
+                  experience.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    helpemailtales.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://123hpmart.com/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >10</span
+                >
+                <img
+                  src="assets/images/shopping-cart.png"
+                  alt=""
+                  class="w-14"
+                />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  123 HP Mart
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Through client-side validation, our project seamlessly blends
+                  multi-step intricacies and traditional forms, crafting a user
+                  experience that's both dynamic and familiar.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    123hpmart.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://printerdriver.support/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >11</span
+                >
+                <img src="assets/images/printer.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Printer Driver Support
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  With client-side validation, our project seamlessly blends
+                  multi-step and traditional forms, ensuring a smooth and
+                  intuitive user experience.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    printerdriver.support
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://printertales.com/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >12</span
+                >
+                <img src="assets/images/folder.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Printer Tales
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Client-side validation harmonizes multi-step and traditional
+                  forms for a seamless user experience, blending innovation with
+                  familiarity.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    printertales.com
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="lg:w-1/3 md:w-1/2 sm:w-2/3 w-full p-2">
+              <a
+                href="https://antivirustales.com/"
+                class="p-8 rounded-2xl transition-all bg-zinc-50 dark:bg-zinc-600/5 hover:bg-zinc-100 dark:hover:bg-zinc-600/10 block w-full group h-full relative group overflow-hidden"
+              >
+                <span
+                  class="absolute text-8xl font-bold -top-8 right-5 leading-none text-zinc-500/20 select-none"
+                  >13</span
+                >
+                <img src="assets/images/shield.png" alt="" class="w-14" />
+                <h3
+                  class="text-zinc-800 dark:text-white text-base font-semibold mt-6"
+                >
+                  Antivirus Tales
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 text-xs font-normal mt-6"
+                >
+                  Utilizing client-side validation, our project seamlessly
+                  blends multi-step and traditional forms, ensuring a smooth and
+                  intuitive user experience.
+                </p>
+                <p
+                  class="text-zinc-800 mt-6 dark:text-white text-sm font-medium group-hover:text-blue-500 flex items-center"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl leading-3 pe-3"></i>
+                    antivirustales.com
+                  </span>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Some more projects -->
+        <div class="pt-20">
+          <h3
+            class="md:text-5xl text-4xl font-bold text-zinc-800 dark:text-white -mt-12 md:w-2/3 w-full"
+          >
+            A New Chapter in Project Excellence
+          </h3>
+          <p
+            class="text-sm font-normal text-zinc-700 dark:text-zinc-300 mt-5 md:w-2/3 w-full"
+          >
+            These projects are more than code; they are a symphony of
+            creativity, bringing forth an unparalleled fusion of functionality
+            and user-centric design. Explore the stories told by our projects,
+            where every line of code whispers tales of innovation and elegance.
+          </p>
+          <div class="flex justify-center">
+            <div class="mt-16 lg:w-full sm:w-2/3 w-full">
+              <a
+                href="https://consultwiki.com/"
+                class="md:px-8 sm:px-6 px-4 py-6 border-zinc-200/70 dark:border-zinc-700/50 lg:border-t lg:border-b-0 border-y relative group projectBox block w-full lg:hover:bg-zinc-100/80 lg:dark:hover:bg-zinc-700/30 lg:bg-transparent lg:dark:bg-transparent bg-zinc-100 dark:bg-zinc-700/20 transition-all lg:mt-0 mt-6"
+              >
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="text-xl font-bold text-zinc-950 dark:text-white md:w-2/3 w-full"
+                    >
+                      consultwiki.com
+                    </h3>
+                    <i
+                      class="bi bi-arrow-right ps-4 text-3xl text-zinc-800 dark:text-white leading-3"
+                    ></i>
+                  </div>
+                  <p
+                    class="text-zinc-950 font-medium dark:font-normal dark:text-zinc-300 text-base mt-6 md:w-2/3 w-full"
+                  >
+                    Utilizing client-side validation, the project incorporates
+                    both multi-step and conventional contact forms to ensure a
+                    smooth and intuitive user experience.
+                  </p>
+                </div>
+                <div
+                  class="lg:absolute block static lg:w-96 w-full lg:hidden lg:group-hover:inline-block top-1/2 lg:-translate-y-1/2 translate-y-0 projectImg z-0 lg:opacity-90 dark:lg:opacity-90 opacity-100 lg:mt-0 mt-5"
+                >
+                  <div class="animateBounce">
+                    <img
+                      src="assets/images/consultwiki.webp"
+                      alt="..."
+                      class="w-full rounded-xl lg:rotate-6 lg:shadow-2xl shadow-none shadow-black/20 dark:shadow-black rotate-0"
+                    />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://antivirustales.com/"
+                class="md:px-8 sm:px-6 px-4 py-6 border-zinc-200/70 dark:border-zinc-700/50 lg:border-t lg:border-b-0 border-y relative group projectBox block w-full lg:hover:bg-zinc-100/80 lg:dark:hover:bg-zinc-700/30 lg:bg-transparent lg:dark:bg-transparent bg-zinc-100 dark:bg-zinc-700/20 transition-all lg:mt-0 mt-6"
+              >
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="text-xl font-bold text-zinc-950 dark:text-white md:w-2/3 w-full"
+                    >
+                      antivirustales.com
+                    </h3>
+                    <i
+                      class="bi bi-arrow-right ps-4 text-3xl text-zinc-800 dark:text-white leading-3"
+                    ></i>
+                  </div>
+                  <p
+                    class="text-zinc-950 font-medium dark:font-normal dark:text-zinc-300 text-base mt-6 md:w-2/3 w-full"
+                  >
+                    Employing client-side validation, the project incorporates
+                    both multi-step and conventional contact forms, ensuring a
+                    smooth and intuitive user experience.
+                  </p>
+                </div>
+                <div
+                  class="lg:absolute block static lg:w-96 w-full lg:hidden lg:group-hover:inline-block top-1/2 lg:-translate-y-1/2 translate-y-0 projectImg z-0 lg:opacity-90 dark:lg:opacity-90 opacity-100 lg:mt-0 mt-5"
+                >
+                  <div class="animateBounce">
+                    <img
+                      src="assets/images/antivirustales.webp"
+                      alt="..."
+                      class="w-full rounded-xl lg:-rotate-6 lg:shadow-2xl shadow-none shadow-black/20 dark:shadow-black rotate-0"
+                    />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://mannymaker.com/"
+                class="md:px-8 sm:px-6 px-4 py-6 border-zinc-200/70 dark:border-zinc-700/50 lg:border-t lg:border-b-0 border-y relative group projectBox block w-full lg:hover:bg-zinc-100/80 lg:dark:hover:bg-zinc-700/30 lg:bg-transparent lg:dark:bg-transparent bg-zinc-100 dark:bg-zinc-700/20 transition-all lg:mt-0 mt-6"
+              >
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="text-xl font-bold text-zinc-950 dark:text-white md:w-2/3 w-full"
+                    >
+                      mannymaker.com
+                    </h3>
+                    <i
+                      class="bi bi-arrow-right ps-4 text-3xl text-zinc-800 dark:text-white leading-3"
+                    ></i>
+                  </div>
+                  <p
+                    class="text-zinc-950 font-medium dark:font-normal dark:text-zinc-300 text-base mt-6 md:w-2/3 w-full"
+                  >
+                    Using client-side validation, the project incorporates both
+                    multi-step and conventional contact forms, ensuring a smooth
+                    and intuitive user experience.
+                  </p>
+                </div>
+                <div
+                  class="lg:absolute block static lg:w-96 w-full lg:hidden lg:group-hover:inline-block top-1/2 lg:-translate-y-1/2 translate-y-0 projectImg z-0 lg:opacity-90 dark:lg:opacity-90 opacity-100 lg:mt-0 mt-5"
+                >
+                  <div class="animateBounce">
+                    <img
+                      src="assets/images/mannymakers.webp"
+                      alt="..."
+                      class="w-full rounded-xl lg:rotate-3 lg:shadow-2xl shadow-none shadow-black/20 dark:shadow-black rotate-0"
+                    />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://martcricut.com/"
+                class="md:px-8 sm:px-6 px-4 py-6 border-zinc-200/70 dark:border-zinc-700/50 lg:border-t lg:border-b-0 border-y relative group projectBox block w-full lg:hover:bg-zinc-100/80 lg:dark:hover:bg-zinc-700/30 lg:bg-transparent lg:dark:bg-transparent bg-zinc-100 dark:bg-zinc-700/20 transition-all lg:mt-0 mt-6"
+              >
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="text-xl font-bold text-zinc-950 dark:text-white md:w-2/3 w-full"
+                    >
+                      martcricut.com
+                    </h3>
+                    <i
+                      class="bi bi-arrow-right ps-4 text-3xl text-zinc-800 dark:text-white leading-3"
+                    ></i>
+                  </div>
+                  <p
+                    class="text-zinc-950 font-medium dark:font-normal dark:text-zinc-300 text-base mt-6 md:w-2/3 w-full"
+                  >
+                    Making the most of client-side validation, our project
+                    integrates user-friendly forms that enhance the user
+                    experience.
+                  </p>
+                </div>
+                <div
+                  class="lg:absolute block static lg:w-96 w-full lg:hidden lg:group-hover:inline-block top-1/2 lg:-translate-y-1/2 translate-y-0 projectImg z-0 lg:opacity-90 dark:lg:opacity-90 opacity-100 lg:mt-0 mt-5"
+                >
+                  <div class="animateBounce">
+                    <img
+                      src="assets/images/martcricut.webp"
+                      alt="..."
+                      class="w-full rounded-xl lg:-rotate-12 lg:shadow-2xl shadow-none shadow-black/20 dark:shadow-black rotate-0"
+                    />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://airbrickinfra.com/"
+                class="md:px-8 sm:px-6 px-4 py-6 border-zinc-200/70 dark:border-zinc-700/50 border-y relative group projectBox block w-full lg:hover:bg-zinc-100/80 lg:dark:hover:bg-zinc-700/30 lg:bg-transparent lg:dark:bg-transparent bg-zinc-100 dark:bg-zinc-700/20 transition-all lg:mt-0 mt-6"
+              >
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between">
+                    <h3
+                      class="text-xl font-bold text-zinc-950 dark:text-white md:w-2/3 w-full"
+                    >
+                      airbrickinfra.com
+                    </h3>
+                    <i
+                      class="bi bi-arrow-right ps-4 text-3xl text-zinc-800 dark:text-white leading-3"
+                    ></i>
+                  </div>
+                  <p
+                    class="text-zinc-950 font-medium dark:font-normal dark:text-zinc-300 text-base mt-6 md:w-2/3 w-full"
+                  >
+                    By incorporating client-side validation, our project offers
+                    users a smooth interaction with both multi-step and
+                    conventional contact forms.
+                  </p>
+                </div>
+                <div
+                  class="lg:absolute block static lg:w-96 w-full lg:hidden lg:group-hover:inline-block top-1/2 lg:-translate-y-1/2 translate-y-0 projectImg z-0 lg:opacity-90 dark:lg:opacity-90 opacity-100 lg:mt-0 mt-5"
+                >
+                  <div class="animateBounce">
+                    <img
+                      src="assets/images/airbrick.webp"
+                      alt="..."
+                      class="w-full rounded-xl lg:rotate-12 lg:shadow-2xl shadow-none shadow-black/20 dark:shadow-black rotate-0"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill section -->
+        <section id="skills">
+          <div class="pt-28">
+            <div class="sm:w-2/3 w-full">
+              <h3
+                class="capitalize md:text-5xl text-3xl font-bold text-zinc-800 dark:text-white"
+              >
+                technologies i work with
+              </h3>
+              <p
+                class="text-zinc-600 dark:text-zinc-300 text-sm font-normal mt-6"
+              >
+                I'm fluent in the languages of the web - HTML5, CSS3, and
+                JavaScript are my tools of choice. I dance with frameworks like
+                Bootstrap and navigate the seas of styles with Sass and Tailwind
+                CSS. From responsive layouts to interactive elements, I bring
+                ideas to life with a touch of innovation and a dash of
+                creativity.
+              </p>
+            </div>
+            <div class="flex flex-wrap mt-20">
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  JavaScript
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  TailwindCSS
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  HTML5
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  CSS3
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  Bootstrap5
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  SASS
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  SCSS
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  Jquery
+                </h3>
+              </div>
+              <div class="p-2">
+                <h3
+                  class="text-zinc-800 dark:text-white lg:text-2xl md:text-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800/50 py-3 px-4"
+                >
+                  GitHub
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Experience Section -->
+        <div class="pt-32" id="experience">
+          <div class="sm:w-2/3 w-full">
+            <h2
+              class="md:text-5xl text-3xl text-zinc-800 font-bold dark:text-white"
+            >
+              Career Collaborations: Whom I Worked With
+            </h2>
+            <p
+              class="text-zinc-600 dark:text-zinc-300 text-sm font-normal mt-6"
+            >
+              Today, I find myself at the intersection of creativity and
+              technology, continuously exploring innovative solutions and
+              pushing the envelope of what's possible. From responsive designs
+              to dynamic web applications, my journey is an ongoing narrative of
+              adaptation, innovation, and a relentless pursuit of excellence.
+            </p>
+            <a
+              href="assets/Harsh-Kushwaha.pdf"
+              class="text-zinc-800 dark:text-zinc-300 hover:text-blue-400 dark:hover:text-white text-sm font-semibold mt-6 inline-block"
+            >
+              <span class="flex items-center">
+                Download CV
+                <i class="bi bi-download ps-3 text-xl leading-3"></i>
+              </span>
+            </a>
+          </div>
+          <div class="mt-28">
+            <div class="p-3 text-center relative">
+              <img
+                src="assets/images/bgExp.png"
+                alt=""
+                class="w-64 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 dark:opacity-40 opacity-10 rotate-12"
+              />
+              <div class="z-10 relative">
+                <h3
+                  class="text-zinc-600 dark:text-zinc-300 sm:text-sm text-xs font-normal"
+                >
+                  UI Developer<br />(August 2023 - Present)
+                </h3>
+                <h3
+                  class="text-zinc-900 dark:text-white sm:text-2xl text-xl font-semibold"
+                >
+                  Alethe Labs India Pvt. Ltd.
+                </h3>
+                <p class="text-xs text-zinc-600 dark:text-zinc-300 font-normal">
+                  Gurugram, Haryana, India
+                </p>
+                <a
+                  href="https://alethelabs.com/"
+                  class="mt-3 inline-block text-blue-400 font-semibold hover:text-blue-500 text-sm"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl pe-2 leading-none"></i
+                    >alethelabs.com
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center mt-2">
+              <div class="h-36 bg-zinc-500 w-[1px] relative">
+                <i
+                  class="bi bi-chevron-up text-zinc-500 absolute -top-2 left-1/2 -translate-x-1/2"
+                ></i>
+              </div>
+            </div>
+            <div class="p-3 text-center relative">
+              <img
+                src="assets/images/bgExp.png"
+                alt=""
+                class="w-64 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 dark:opacity-40 opacity-10 rotate-12"
+              />
+              <div class="z-10 relative">
+                <h3
+                  class="text-zinc-600 dark:text-zinc-300 sm:text-sm text-xs font-normal"
+                >
+                  UI/UX Developer<br />(February 2023 - August 2023)
+                </h3>
+                <h3
+                  class="text-zinc-900 dark:text-white sm:text-2xl text-xl font-semibold"
+                >
+                  e-Global Soft Solutions
+                </h3>
+                <p class="text-xs text-zinc-600 dark:text-zinc-300 font-normal">
+                  Delhi, India
+                </p>
+                <a
+                  href="https://eglobalsoftsolutions.com/"
+                  class="mt-3 inline-block text-blue-400 font-semibold hover:text-blue-500 text-sm"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl pe-2 leading-none"></i
+                    >eglobalsoftsolutions.com
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center mt-2">
+              <div class="h-36 bg-zinc-500 w-[1px] relative">
+                <i
+                  class="bi bi-chevron-up text-zinc-500 absolute -top-2 left-1/2 -translate-x-1/2"
+                ></i>
+              </div>
+            </div>
+            <div class="p-3 text-center relative">
+              <img
+                src="assets/images/bgExp.png"
+                alt=""
+                class="w-64 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 dark:opacity-40 opacity-10 rotate-12"
+              />
+              <div class="z-10 relative">
+                <h3
+                  class="text-zinc-600 dark:text-zinc-300 sm:text-sm text-xs font-normal"
+                >
+                  Frontend Developer<br />(January 2022 - January 2023)
+                </h3>
+                <h3
+                  class="text-zinc-900 dark:text-white sm:text-2xl text-xl font-semibold"
+                >
+                  Pnapaao Pvt. Ltd.
+                </h3>
+                <p class="text-xs text-zinc-600 dark:text-zinc-300 font-normal">
+                  Noida, Uttar Pradesh India
+                </p>
+                <a
+                  href="https://pnapaao.com/"
+                  class="mt-3 inline-block text-blue-400 font-semibold hover:text-blue-500 text-sm"
+                >
+                  <span class="flex items-center">
+                    <i class="bi bi-link text-xl pe-2 leading-none"></i
+                    >pnapaao.com
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Uses -->
+        <div class="pt-44" id="uses">
+          <div class="sm:w-2/3 w-full">
+            <h3
+              class="text-zinc-800 dark:text-white md:text-5xl text-3xl font-bold"
+            >
+              Unveiling My Coding Toolbox, Favorite Gadgets
+            </h3>
+            <p
+              class="text-zinc-600 dark:text-zinc-300 text-sm font-normal mt-5"
+            >
+              In the world of web development, precision is paramount. I
+              navigate the digital landscape armed with a set of tools that
+              streamline my workflow and elevate my coding experience.
+            </p>
+          </div>
+          <div class="mt-20 flex flex-wrap">
+            <div class="lg:w-1/6 md:w-1/5 sm:w-1/4 w-full p-3">
+              <h3 class="text-zinc-900 dark:text-white text-base font-bold">
+                Coding Arsenal
+              </h3>
+            </div>
+            <div
+              class="lg:w-5/6 md:w-4/5 sm:w-3/4 w-full sm:ps-7 p-3 sm:border-s border-zinc-200 dark:border-zinc-500/30"
+            >
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Visual Studio Code
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  My go-to code editor, where every line of code is crafted with
+                  precision and ease.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Git & GitHub
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  Ensuring version control and collaboration seamlessly, because
+                  great projects are built on a solid foundation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex flex-wrap">
+            <div class="lg:w-1/6 md:w-1/5 sm:w-1/4 w-full p-3">
+              <h3 class="text-zinc-900 dark:text-white text-base font-bold">
+                Gadgets I Swear By
+              </h3>
+            </div>
+            <div
+              class="lg:w-5/6 md:w-4/5 sm:w-3/4 w-full sm:ps-7 p-3 sm:border-s border-zinc-200 dark:border-zinc-500/30"
+            >
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  MacBook Pro
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  A sleek powerhouse that serves as my coding sanctuary.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  High-Resolution Monitor
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  For a pixel-perfect view of my creations.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Mechanical Keyboard
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  The satisfying clickety-clack that enhances my coding rhythm.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex flex-wrap">
+            <div class="lg:w-1/6 md:w-1/5 sm:w-1/4 w-full p-3">
+              <h3 class="text-zinc-900 dark:text-white text-base font-bold">
+                Recommended Resources
+              </h3>
+            </div>
+            <div
+              class="lg:w-5/6 md:w-4/5 sm:w-3/4 w-full sm:ps-7 p-3 sm:border-s border-zinc-200 dark:border-zinc-500/30"
+            >
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  MDN Web Docs
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  A comprehensive resource for all things web development.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Stack Overflow
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  The community where coding mysteries meet their solutions.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  A List Apart
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  Insights and articles that bridge the gap between design and
+                  code.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex flex-wrap">
+            <div class="lg:w-1/6 md:w-1/5 sm:w-1/4 w-full p-3">
+              <h3 class="text-zinc-900 dark:text-white text-base font-bold">
+                Essential Software
+              </h3>
+            </div>
+            <div
+              class="lg:w-5/6 md:w-4/5 sm:w-3/4 w-full sm:ps-7 p-3 sm:border-s border-zinc-200 dark:border-zinc-500/30"
+            >
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Node.js
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  Enabling server-side JavaScript and opening doors to dynamic
+                  web applications.
+                </p>
+              </div>
+              <div class="mb-12">
+                <h3
+                  class="text-zinc-800 dark:text-zinc-200 text-sm font-medium"
+                >
+                  Chrome Developer Tools
+                </h3>
+                <p
+                  class="text-zinc-600 dark:text-zinc-300 mt-4 text-xs font-normal"
+                >
+                  A treasure trove for debugging and optimizing web performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Connect with me -->
+        <div class="py-32">
+          <div class="sm:w-2/3 w-full relative">
+            <div class="absolute z-0 top-5 right-5 animateBounceSlow">
+              <img
+                src="assets/images/contact.png"
+                alt="..."
+                class="sm:w-52 w-36 saturate-0 opacity-20 rotate-12"
+              />
+            </div>
+            <div class="relative z-10">
+              <h3
+                class="text-zinc-800 dark:text-white md:text-5xl text-3xl font-bold"
+              >
+                Let's Build Together - Your Dream, My Code
+              </h3>
+              <p
+                class="text-zinc-600 dark:text-zinc-300 text-sm font-normal mt-5"
+              >
+                Let's embark on a coding journey where your dreams and my code
+                collide, creating a digital masterpiece. Together, we'll weave
+                innovation into reality, turning aspirations into tangible
+                wonders. Join me in crafting a symphony of creativity, where
+                your vision meets my technical prowess for something truly
+                extraordinary.
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-center mt-8">
+            <div
+              class="lg:w-1/2 md:2/3 sm:w-3/4 w-full mt-20 px-4 border rounded-2xl border-zinc-200 dark:border-zinc-800 sm:p-8 p-5"
+            >
+              <h3
+                class="text-zinc-600 dark:text-zinc-200 sm:text-xl text-lg font-semibold text-center mb-5"
+              >
+                Elevate Your Dreams with <br class="sm:block hidden" />
+                My Creative Expertise!
+              </h3>
+              <form onsubmit="return validateFormSubmit()" class="mt-10">
+                <div class="mb-3">
+                  <div class="relative">
+                    <i
+                      id="userNameIcon"
+                      class="bi bi-exclamation-circle text-red-500 text-xl leading-3 hidden absolute right-2 top-1/2 -translate-y-1/2 z-10"
+                    ></i>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Full Name"
+                      class="block w-full py-2 px-3 rounded-md outline-none text-xs font-medium dark:font-normal bg-transparent border border-zinc-200/60 dark:border-zinc-800/50 text-zinc-800 dark:text-white placeholder:text-zinc-700 dark:placeholder:text-zinc-100 transition-all focus:bg-zinc-100/60 dark:focus:bg-zinc-700/20"
+                      id="userName"
+                    />
+                  </div>
+                  <p
+                    class="text-red-500 text-[11px] font-normal mt-1 font-sans"
+                    id="nameErr"
+                  ></p>
+                </div>
+                <div class="mb-3">
+                  <div class="relative">
+                    <i
+                      id="userEmailIcon"
+                      class="bi bi-exclamation-circle text-red-500 text-xl leading-3 hidden absolute right-2 top-1/2 -translate-y-1/2 z-10"
+                    ></i>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Email Adress"
+                      class="block w-full py-2 px-3 rounded-md outline-none text-xs font-medium dark:font-normal bg-transparent border border-zinc-200/60 dark:border-zinc-800/50 text-zinc-800 dark:text-white placeholder:text-zinc-700 dark:placeholder:text-zinc-100 transition-all focus:bg-zinc-100/60 dark:focus:bg-zinc-700/20"
+                      id="userEmail"
+                    />
+                  </div>
+                  <p
+                    class="text-red-500 text-[11px] font-normal mt-1 font-sans"
+                    id="emailErr"
+                  ></p>
+                </div>
+                <div class="mb-3">
+                  <div class="relative">
+                    <i
+                      id="userNumberIcon"
+                      class="bi bi-exclamation-circle text-red-500 text-xl leading-3 hidden absolute right-2 top-1/2 -translate-y-1/2 z-10"
+                    ></i>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Contact Number"
+                      class="block w-full py-2 px-3 rounded-md outline-none text-xs font-medium dark:font-normal bg-transparent border border-zinc-200/60 dark:border-zinc-800/50 text-zinc-800 dark:text-white placeholder:text-zinc-700 dark:placeholder:text-zinc-100 transition-all focus:bg-zinc-100/60 dark:focus:bg-zinc-700/20"
+                      id="userNum"
+                    />
+                  </div>
+                  <p
+                    class="text-red-500 text-[11px] font-normal mt-1 font-sans"
+                    id="numErr"
+                  ></p>
+                </div>
+                <div class="mb-3">
+                  <div class="relative">
+                    <i
+                      id="userMessageIcon"
+                      class="bi bi-exclamation-circle text-red-500 text-xl leading-3 hidden absolute right-2 top-2 z-10"
+                    ></i>
+                    <textarea
+                      id="userMessage"
+                      autocomplete="off"
+                      placeholder="Type Your Message"
+                      class="block w-full py-2 px-3 rounded-md outline-none text-xs font-medium dark:font-normal bg-transparent border border-zinc-200/60 dark:border-zinc-800/50 text-zinc-800 dark:text-white placeholder:text-zinc-700 dark:placeholder:text-zinc-100 transition-all focus:bg-zinc-100/60 dark:focus:bg-zinc-700/20 resize-none h-24"
+                    ></textarea>
+                  </div>
+                  <p
+                    class="text-red-500 text-[11px] font-normal mt-1 font-sans"
+                    id="messageErr"
+                  ></p>
+                </div>
+                <div class="text-center mt-4">
+                  <button
+                    type="submit"
+                    class="text-sm font-medium rounded-md py-2 px-6 text-white bg-blue-500 hover:bg-blue-600 transition-all"
+                  >
+                    Connect
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="border-t border-zinc-500 py-10">
+          <div
+            class="flex flex-wrap sm:justify-between justify-center items-center"
+          >
+            <div class="flex flex-wrap items-center">
+              <a
+                href="#about"
+                class="p-2 text-xs font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white"
+                >About</a
+              >
+              <a
+                href="#projects"
+                class="p-2 text-xs font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white"
+                >Projects</a
+              >
+              <a
+                href="#skills"
+                class="p-2 text-xs font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white"
+                >Skills</a
+              >
+              <a
+                href="#experience"
+                class="p-2 text-xs font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white"
+                >Experiences</a
+              >
+              <a
+                href="#uses"
+                class="p-2 text-xs font-medium text-zinc-800 sm:dark:text-zinc-200 dark:text-white hover:text-blue-500 dark:hover:text-white"
+                >Uses</a
+              >
+            </div>
+            <div
+              class="text-xs font-normal text-zinc-600 dark:text-zinc-300 sm:mt-0 mt-2"
+            >
+              © 2023 Harsh Kushwaha. All rights reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- To top button -->
+    <button
+      type="button"
+      class="text-zinc-900 dark:text-white fixed bottom-3 sm:right-0 -right-3 z-50 toTop hidden"
+    >
+      <div
+        class="text-xs text-zinc-900 dark:text-white font-medium mb-7 rotate-90"
+      >
+        Go to top
+      </div>
+      <i class="bi bi-arrow-up text-lg"></i>
+    </button>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  cursor: url("../images/pointer.png"), auto;
+}
+
+img{
+  -webkit-user-drag: none;
+}
+
+::-moz-selection {
+  color: white;
+  background: gray;
+}
+
+::selection {
+  color: white;
+  background: gray;
+}
+
+a,
+button,
+button > div,
+button > i,
+a > i,
+a:hover,
+button:hover,
+a > *,
+a > * > *,
+a > * > * > *,
+button > *,
+button > * > * {
+  cursor: url("../images/cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.scrollLeft {
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+
+  100% {
+    transform: translateX(-100%) translateZ(0);
+  }
+}
+
+.animateBounceSlow {
+  animation: animateBounceSlow 10s linear infinite;
+}
+
+.animateBounce {
+  animation: animateBounceSlow 10s linear infinite;
+}
+
+@keyframes animateBounceSlow {
+  10% {
+    transform: translateY(14px);
+  }
+  20% {
+    transform: translateY(-12px);
+  }
+  30% {
+    transform: translateY(16px);
+  }
+  40% {
+    transform: translateY(-17px);
+  }
+  50% {
+    transform: translateY(18px);
+  }
+  60% {
+    transform: translateY(-13px);
+  }
+  70% {
+    transform: translateY(17px);
+  }
+  80% {
+    transform: translateY(-18px);
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.loadingDot1 {
+  animation: loading1 2s linear infinite;
+}
+
+.loadingDot2 {
+  animation: loading2 2s linear infinite;
+}
+
+.loadingDot3 {
+  animation: loading3 2s linear infinite;
+}
+
+.loadingDot4 {
+  animation: loading4 2s linear infinite;
+}
+
+@keyframes loading1 {
+  15% {
+    transform: translateY(-18px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes loading2 {
+  30% {
+    transform: translateY(-18px);
+  }
+  45% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes loading3 {
+  45% {
+    transform: translateY(-18px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes loading4 {
+  60% {
+    transform: translateY(-18px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+}
+
+.loadingLine {
+  animation: loadingline 2s linear infinite;
+}
+
+@keyframes loadingline {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .animateBounce {
+    animation-play-state: paused;
+  }
+}
+
+.projectImg {
+  transition: 0.3s;
+}
+
+.navBarAnimetion {
+  animation: navbarBounce 0.6s;
+}
+
+@keyframes navbarBounce {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
